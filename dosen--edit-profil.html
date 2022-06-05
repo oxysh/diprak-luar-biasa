@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="shortcut icon" href="assets/img/logo-unair.png" type="image/x-icon">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/env.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/mahasiswa.css">
+    <link rel="stylesheet" href="assets/css/dosen.css">
+</head>
+
+<body>
+    <img src="assets/img/logo-unair.png" alt="" class="ornament">
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__left">
+                <img src="assets/img/logo-fst.png" alt="" class="nav__logo"
+                    onclick="window.location.href = 'dosen--dashboard.html'">
+                <a href="dosen--mata-kuliah.html" class="grey">Mata Kuliah</a>
+            </div>
+            <div class="nav__dropdown">
+                <div class="nav__profile">A</div>
+                <p class="grey">Halo, Purbandini!</p>
+                <img src="assets/img/dropdown-arrow.svg" alt="" class="nav__dropdown-arrow">
+            </div>
+            <div class="nav__dropdown-menu">
+                <p class="nav__dropdown-item" onclick="window.location.href = 'dosen--view-profil.html'">Profil Saya
+                </p>
+                <p class="nav__dropdown-item" onclick="window.location.href = 'dosen--login.html'">Log Out</p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container edit-profil">
+        <!-- mulai ini -->
+        <div class="edit-profil__card">
+            <h1 class="blue">Edit Profil</h1>
+            <div class="form-group">
+                <div class="form-head">
+                    <label class="form-label" for="nip">NIP</label>
+                    <h6 class="form-helper red hidden">Wajib diisi</h6>
+                </div>
+                <input type="text" class="form-control wajib-diisi" name="nip" id="nip" placeholder="NIM/NIP"
+                    value="082011633038">
+            </div>
+            <div class="form-group">
+                <div class="form-head">
+                    <label class="form-label" for="nama">Nama Lengkap</label>
+                    <h6 class="form-helper red hidden">Wajib diisi</h6>
+                </div>
+                <input type="text" class="form-control wajib-diisi" name="nama" id="nama"
+                    placeholder="Misal: Oxy Setyo Hapsari" value="Annisa Rahma Putri">
+            </div>
+            <div class="form-group">
+                <div class="form-head">
+                    <label class="form-label" for="zoom">Nama Zoom</label>
+                    <h6 class="form-helper red hidden">Wajib diisi</h6>
+                </div>
+                <input type="text" class="form-control wajib-diisi" name="zoom" id="zoom"
+                    placeholder="Misal: 082011633042_Oxy Setyo Hapsari" value="082011633038_Annisa Rahma Putri">
+            </div>
+            <div class="form-group">
+                <div class="form-head">
+                    <label class="form-label" for="email">Email</label>
+                    <h6 class="form-helper red hidden">Wajib diisi</h6>
+                </div>
+                <input type="text" class="form-control wajib-diisi" name="email" id="email"
+                    placeholder="Misal: oxy.setyo.hapsari-2020@fst.unair.ac.id"
+                    value="annisa.rahma.putri-2020@fst.unair.ac.id">
+            </div>
+            <div class="form-group">
+                <div class="form-head">
+                    <label class="form-label" for="telp">No. Telepon</label>
+                    <h6 class="form-helper red hidden">Wajib diisi</h6>
+                </div>
+                <input type="text" class="form-control wajib-diisi" name="telp" id="telp"
+                    placeholder="Misal: 081234567890" value="081234567890">
+            </div>
+            <div class="form-buttons">
+                <button type="button" class="btn-secondary" id="batalEditProfil">Batalkan</button>
+                <button type="button" class="btn-primary" id="editProfil">Edit</button>
+            </div>
+        </div>
+        <!-- sampe sini -->
+    </div>
+
+    <!-- kalo mau pake modal boleh disini -->
+    <div class="edit-profil__batal-edit-dialog dialog">
+        <h3 class="blue dialog__title">Batalkan?</h3>
+        <h4 class="grey dialog__body">Apakah anda yakin ingin membatalkan proses? Proses tidak akan tersimpan.</h4>
+        <div class="dialog__btns">
+            <button type="button" class="btn-primary btn-close">Lanjutkan</button>
+            <a href="mahasiswa--view-profil.html" class="button btn-secondary">Iya, Batalkan</a>
+        </div>
+    </div>
+
+    <div class="edit-profil__edit-dialog dialog">
+        <h3 class="blue dialog__title">Ubah Data?</h3>
+        <h4 class="grey dialog__body">Apakah anda yakin ingin mengubah data?</h4>
+        <div class="dialog__btns">
+            <button type="button" class="btn-secondary btn-close">Batal</button>
+            <a href="mahasiswa--view-profil.html" class="button btn-primary">Ubah</a>
+        </div>
+    </div>
+
+    <div class="dialog__bg"></div>
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/js/env.js"></script>
+    <script>
+        $('#batalEditProfil').click(() => {
+            $('.edit-profil__batal-edit-dialog')[0].classList.add('active');
+            $('.dialog__bg')[0].classList.add('active');
+        });
+
+        $('#editProfil').click(() => {
+            $('.edit-profil__edit-dialog')[0].classList.add('active');
+            $('.dialog__bg')[0].classList.add('active');
+        });
+    </script>
+</body>
+
+</html>

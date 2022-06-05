@@ -1,0 +1,202 @@
+@import 'resources';
+
+.mata-kuliah {
+    min-height: calc(100vh - 6rem);
+    padding-top: 3rem;
+    padding-bottom: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 1.5rem;
+
+    &__title {
+        margin-bottom: 2.5rem;
+    }
+
+    &__search-bar {
+        width: 80%;
+        max-width: 540px;
+        display: flex;
+        align-items: center;
+        justify-content: stretch;
+        border-bottom: 1px solid $rich-black;
+    }
+
+    &__input-search {
+        width: 100%;
+        padding: .25rem .5rem;
+        background-color: transparent;
+        border: none;
+
+        &:focus,
+        &:focus-visible,
+        &:focus-within {
+            outline: none;
+        }
+    }
+
+    &__mk {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1.5rem 1rem;
+    }
+
+    &__mk-card {
+        width: calc((100% - 3rem)/4);
+        padding: 2rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+        border-radius: 4px;
+        background-color: $alice-blue;
+        box-shadow: 0px 10px 30px rgba(206, 221, 239, 0.25);
+
+        @media screen and (max-width: 1199.9px) {
+            width: calc((100% - 2rem)/3);
+        }
+
+        @media screen and (max-width: 991.9px) {
+            width: calc((100% - 1rem)/2);
+        }
+
+        @media screen and (max-width: 575.9px) {
+            width: 100%;
+        }
+    }
+
+    &__mk-detail {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 1rem;
+    }
+}
+
+.detail-mk {
+    min-height: calc(100vh - 6rem);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 2rem;
+
+    &__details {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: center;
+        gap: 2.5rem;
+    }
+
+    &--grid {
+        width: calc((100% - 5rem)/3);
+        display: grid;
+        grid-template-columns: auto min-content;
+        grid-template-areas:
+            'title title'
+            'label-satu value-satu'
+            'label-dua value-dua'
+            'label-tiga value-tiga'
+            'label-empat value-empat'
+            'label-lima value-lima'
+        ;
+        gap: .5rem;
+
+        &__title {
+            grid-area: title;
+        }
+
+        &__label-satu {
+            grid-area: label-satu;
+        }
+
+        &__label-dua {
+            grid-area: label-dua;
+        }
+
+        &__label-tiga {
+            grid-area: label-tiga;
+        }
+
+        &__label-empat {
+            grid-area: label-empat;
+        }
+
+        &__label-lima {
+            grid-area: label-lima;
+        }
+
+        &__value-satu {
+            grid-area: value-satu;
+        }
+
+        &__value-dua {
+            grid-area: value-dua;
+        }
+
+        &__value-tiga {
+            grid-area: value-tiga;
+        }
+
+        &__value-empat {
+            grid-area: value-empat;
+        }
+
+        &__value-lima {
+            grid-area: value-lima;
+        }
+    }
+
+    &__materi-pembelajaran {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: .5rem;
+    }
+
+    &__materi {
+        width: 100%;
+        display: flex;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1rem;
+    }
+
+    &__materi-card {
+        width: calc((100% - 4rem)/5);
+        padding: 1rem .75rem;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        gap: .75rem;
+        border-radius: 4px;
+        background-color: $alice-blue;
+        box-shadow: 0px 10px 30px rgba(206, 221, 239, 0.25);
+
+        >.blue {
+            padding-bottom: 1rem;
+        }
+
+        >.btn-secondary {
+            align-self: flex-end;
+        }
+    }
+
+    &__materi-add-btn {
+        width: calc((100% - 4rem)/5);
+        align-self: stretch;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border: 2px dashed $rich-black-50;
+        border-radius: 4px;
+    }
+}

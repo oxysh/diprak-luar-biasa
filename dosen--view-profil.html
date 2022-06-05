@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Profil Annisa Rahma Putri</title>
+
+    <link rel="shortcut icon" href="assets/img/logo-unair.png" type="image/x-icon">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/env.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/mahasiswa.css">
+    <link rel="stylesheet" href="assets/css/dosen.css">
+</head>
+
+<body>
+    <img src="assets/img/logo-unair.png" alt="" class="ornament">
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__left">
+                <img src="assets/img/logo-fst.png" alt="" class="nav__logo"
+                    onclick="window.location.href = 'dosen--dashboard.html'">
+                <a href="dosen--mata-kuliah.html" class="grey">Mata Kuliah</a>
+            </div>
+            <div class="nav__dropdown">
+                <div class="nav__profile">A</div>
+                <p class="grey">Halo, Purbandini!</p>
+                <img src="assets/img/dropdown-arrow.svg" alt="" class="nav__dropdown-arrow">
+            </div>
+            <div class="nav__dropdown-menu">
+                <p class="nav__dropdown-item" onclick="window.location.href = 'dosen--view-profil.html'">Profil Saya
+                </p>
+                <p class="nav__dropdown-item" onclick="window.location.href = 'dosen--login.html'">Log Out</p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container view-profil">
+        <!-- mulai ini -->
+        <img src="assets/img/foto.png" alt="" class="view-profil__img">
+        <div class="view-profil__profil-container">
+            <h1 class="blue">Annisa Rahma Putri</h1>
+            <div class="view-profil__profils">
+                <p class="grey view-profil__label view-profil__label--nim">NIP</p>
+                <p class="view-profil__value view-profil__value--nim">082011633038</p>
+                <p class="grey view-profil__label view-profil__label--telp">No. Telepon</p>
+                <p class="view-profil__value view-profil__value--telp">081234567890</p>
+                <p class="grey view-profil__label view-profil__label--email">Email</p>
+                <p class="view-profil__value view-profil__value--email">annisa.rahma.putri-2020@fst.unair.ac.id</p>
+                <p class="grey view-profil__label view-profil__label--zoom">Nama Zoom</p>
+                <p class="view-profil__value view-profil__value--zoom">082011633038_Annisa R. P.</p>
+            </div>
+            <a href="mahasiswa--edit-profil.html" class="button btn-primary">Edit Profil</a>
+        </div>
+        <!-- sampe sini -->
+    </div>
+
+    <!-- kalo mau pake modal boleh disini -->
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/js/env.js"></script>
+</body>
+
+</html>

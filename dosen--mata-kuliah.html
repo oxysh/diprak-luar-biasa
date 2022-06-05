@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mata Kuliah</title>
+
+    <link rel="shortcut icon" href="assets/img/logo-unair.png" type="image/x-icon">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/env.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/mahasiswa.css">
+    <link rel="stylesheet" href="assets/css/dosen.css">
+</head>
+
+<body>
+    <img src="assets/img/logo-unair.png" alt="" class="ornament">
+    <nav class="nav">
+        <div class="container">
+            <div class="nav__left">
+                <img src="assets/img/logo-fst.png" alt="" class="nav__logo"
+                    onclick="window.location.href = 'dosen--dashboard.html'">
+                <a href="dosen--mata-kuliah.html" class="grey">Mata Kuliah</a>
+            </div>
+            <div class="nav__dropdown">
+                <div class="nav__profile">A</div>
+                <p class="grey">Halo, Purbandini!</p>
+                <img src="assets/img/dropdown-arrow.svg" alt="" class="nav__dropdown-arrow">
+            </div>
+            <div class="nav__dropdown-menu">
+                <p class="nav__dropdown-item" onclick="window.location.href = 'dosen--view-profil.html'">Profil Saya
+                </p>
+                <p class="nav__dropdown-item" onclick="window.location.href = 'dosen--login.html'">Log Out</p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mata-kuliah">
+        <!-- mulai ini -->
+        <h1 class="blue mata-kuliah__title">Kelas yang diajar</h1>
+        <div class="mata-kuliah__search-bar">
+            <input type="text" class="mata-kuliah__input-search"
+                placeholder="Cari Mata Kuliah, Strata, MK, Ruang, atau Kelas...">
+            <img src="assets/img/search.svg" alt="">
+        </div>
+
+        <div class="mata-kuliah__mk">
+            <div class="mata-kuliah__mk-card">
+                <h4 class="blue">Judul Mata Kuliah</h4>
+                <div class="mata-kuliah__mk-detail">
+                    <h4 class="blue">S1</h4>
+                    <h5>MK - Ruang - Kelas</h5>
+                </div>
+                <a href="dosen--detail-materi.html" class="button btn-primary">Lihat Detail</a>
+            </div>
+            <div class="mata-kuliah__mk-card">
+                <h4 class="blue">Judul Mata Kuliah</h4>
+                <div class="mata-kuliah__mk-detail">
+                    <h4 class="blue">S1</h4>
+                    <h5>MK - Ruang - Kelas</h5>
+                </div>
+                <a href="dosen--detail-materi.html" class="button btn-primary">Lihat Detail</a>
+            </div>
+            <div class="mata-kuliah__mk-card">
+                <h4 class="blue">Judul Mata Kuliah</h4>
+                <div class="mata-kuliah__mk-detail">
+                    <h4 class="blue">S1</h4>
+                    <h5>MK - Ruang - Kelas</h5>
+                </div>
+                <a href="dosen--detail-materi.html" class="button btn-primary">Lihat Detail</a>
+            </div>
+            <div class="mata-kuliah__mk-card">
+                <h4 class="blue">Judul Mata Kuliah</h4>
+                <div class="mata-kuliah__mk-detail">
+                    <h4 class="blue">S1</h4>
+                    <h5>MK - Ruang - Kelas</h5>
+                </div>
+                <a href="dosen--detail-materi.html" class="button btn-primary">Lihat Detail</a>
+            </div>
+            <div class="mata-kuliah__mk-card">
+                <h4 class="blue">Judul Mata Kuliah</h4>
+                <div class="mata-kuliah__mk-detail">
+                    <h4 class="blue">S1</h4>
+                    <h5>MK - Ruang - Kelas</h5>
+                </div>
+                <a href="dosen--detail-materi.html" class="button btn-primary">Lihat Detail</a>
+            </div>
+        </div>
+        <!-- sampe sini -->
+    </div>
+
+    <!-- kalo mau pake modal boleh disini -->
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/js/env.js"></script>
+</body>
+
+</html>

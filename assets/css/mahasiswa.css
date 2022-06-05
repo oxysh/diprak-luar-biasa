@@ -71,7 +71,7 @@
   display: grid;
   grid-template-columns: 1fr 1.35fr;
   grid-template-areas: 'kelas-title kelas-title' 'pertemuan-title kode' 'hari meeting-id' 'waktu meeting-pass' 'btn-materi btn-zoom' 'helper-materi helper-zoom';
-  gap: .25rem;
+  gap: .25rem 1rem;
   background-color: #F4F7FF;
   box-shadow: 0px 10px 30px rgba(206, 221, 239, 0.25);
   border-radius: .25rem;
@@ -121,6 +121,10 @@
 .dashboard__btn-zoom {
   margin-top: 1rem;
   grid-area: btn-zoom;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dashboard__helper-zoom {
@@ -131,6 +135,10 @@
 .dashboard__btn-materi {
   margin-top: 1rem;
   grid-area: btn-materi;
+  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .dashboard__helper-materi {

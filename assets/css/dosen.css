@@ -1,0 +1,199 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Raleway:wght@400;500;600&display=swap");
+.mata-kuliah {
+  min-height: calc(100vh - 6rem);
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 1.5rem;
+}
+
+.mata-kuliah__title {
+  margin-bottom: 2.5rem;
+}
+
+.mata-kuliah__search-bar {
+  width: 80%;
+  max-width: 540px;
+  display: flex;
+  align-items: center;
+  justify-content: stretch;
+  border-bottom: 1px solid #060C21;
+}
+
+.mata-kuliah__input-search {
+  width: 100%;
+  padding: .25rem .5rem;
+  background-color: transparent;
+  border: none;
+}
+
+.mata-kuliah__input-search:focus, .mata-kuliah__input-search:focus-visible, .mata-kuliah__input-search:focus-within {
+  outline: none;
+}
+
+.mata-kuliah__mk {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.5rem 1rem;
+}
+
+.mata-kuliah__mk-card {
+  width: calc((100% - 3rem)/4);
+  padding: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+  border-radius: 4px;
+  background-color: #F4F7FF;
+  box-shadow: 0px 10px 30px rgba(206, 221, 239, 0.25);
+}
+
+@media screen and (max-width: 1199.9px) {
+  .mata-kuliah__mk-card {
+    width: calc((100% - 2rem)/3);
+  }
+}
+
+@media screen and (max-width: 991.9px) {
+  .mata-kuliah__mk-card {
+    width: calc((100% - 1rem)/2);
+  }
+}
+
+@media screen and (max-width: 575.9px) {
+  .mata-kuliah__mk-card {
+    width: 100%;
+  }
+}
+
+.mata-kuliah__mk-detail {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.detail-mk {
+  min-height: calc(100vh - 6rem);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.detail-mk__details {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 2.5rem;
+}
+
+.detail-mk--grid {
+  width: calc((100% - 5rem)/3);
+  display: grid;
+  grid-template-columns: auto min-content;
+  grid-template-areas: 'title title' 'label-satu value-satu' 'label-dua value-dua' 'label-tiga value-tiga' 'label-empat value-empat' 'label-lima value-lima';
+  gap: .5rem;
+}
+
+.detail-mk--grid__title {
+  grid-area: title;
+}
+
+.detail-mk--grid__label-satu {
+  grid-area: label-satu;
+}
+
+.detail-mk--grid__label-dua {
+  grid-area: label-dua;
+}
+
+.detail-mk--grid__label-tiga {
+  grid-area: label-tiga;
+}
+
+.detail-mk--grid__label-empat {
+  grid-area: label-empat;
+}
+
+.detail-mk--grid__label-lima {
+  grid-area: label-lima;
+}
+
+.detail-mk--grid__value-satu {
+  grid-area: value-satu;
+}
+
+.detail-mk--grid__value-dua {
+  grid-area: value-dua;
+}
+
+.detail-mk--grid__value-tiga {
+  grid-area: value-tiga;
+}
+
+.detail-mk--grid__value-empat {
+  grid-area: value-empat;
+}
+
+.detail-mk--grid__value-lima {
+  grid-area: value-lima;
+}
+
+.detail-mk__materi-pembelajaran {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: .5rem;
+}
+
+.detail-mk__materi {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem;
+}
+
+.detail-mk__materi-card {
+  width: calc((100% - 4rem)/5);
+  padding: 1rem .75rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .75rem;
+  border-radius: 4px;
+  background-color: #F4F7FF;
+  box-shadow: 0px 10px 30px rgba(206, 221, 239, 0.25);
+}
+
+.detail-mk__materi-card > .blue {
+  padding-bottom: 1rem;
+}
+
+.detail-mk__materi-card > .btn-secondary {
+  align-self: flex-end;
+}
+
+.detail-mk__materi-add-btn {
+  width: calc((100% - 4rem)/5);
+  align-self: stretch;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed rgba(6, 12, 33, 0.5);
+  border-radius: 4px;
+}
+/*# sourceMappingURL=dosen.css.map */

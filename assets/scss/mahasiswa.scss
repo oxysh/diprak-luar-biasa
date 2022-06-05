@@ -79,7 +79,7 @@
             'btn-materi btn-zoom'
             'helper-materi helper-zoom'
         ;
-        gap: .25rem;
+        gap: .25rem 1rem;
         background-color: $alice-blue;
         box-shadow: 0px 10px 30px rgba(206, 221, 239, 0.25);
         border-radius: .25rem;
@@ -123,8 +123,17 @@
     }
 
     &__btn-zoom {
+        // height: fit-content;
         margin-top: 1rem;
         grid-area: btn-zoom;
+        // align-self: center;
+        text-align: center;
+
+        // 1st style -> uncomment yg atas, comment 3 line di bawah;
+        // 2nd style -> this.
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__helper-zoom {
@@ -133,8 +142,17 @@
     }
 
     &__btn-materi {
+        // height: fit-content;
         margin-top: 1rem;
         grid-area: btn-materi;
+        // align-self: center;
+        text-align: center;
+
+        // 1st style -> uncomment yg atas, comment 3 line di bawah;
+        // 2nd style -> this.
+        display: flex;
+        align-items: center;
+        justify-content: center;
     }
 
     &__helper-materi {
