@@ -1,0 +1,250 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Raleway:wght@400;500;600&display=swap");
+.login {
+  min-height: calc(100vh - 6rem);
+  padding-bottom: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.login__card {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: stretch;
+  justify-content: center;
+  gap: 2rem;
+  background-color: #F4F7FF;
+  border-radius: 4px;
+  box-shadow: 0px 10px 30px rgba(206, 221, 239, 0.25);
+}
+
+.login__card > .btn-primary {
+  align-self: flex-end;
+}
+
+.login__title-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: .25rem;
+}
+
+.login__title-section > * {
+  text-align: center;
+}
+
+.dashboard {
+  min-height: calc(100vh - 6rem);
+  padding-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.dashboard__section {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1.25rem;
+}
+
+.dashboard__kelas {
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 1rem 1.5rem;
+}
+
+.dashboard__kelas-card {
+  width: calc((100% - 3rem)/3);
+  padding: 1.25rem 1.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1.35fr;
+  grid-template-areas: 'kelas-title kelas-title' 'pertemuan-title kode' 'hari meeting-id' 'waktu meeting-pass' 'btn-materi btn-zoom' 'helper-materi helper-zoom';
+  gap: .25rem;
+  background-color: #F4F7FF;
+  box-shadow: 0px 10px 30px rgba(206, 221, 239, 0.25);
+  border-radius: .25rem;
+}
+
+@media screen and (max-width: 1199.9px) {
+  .dashboard__kelas-card {
+    width: calc((100% - 1.5rem)/2);
+  }
+}
+
+@media screen and (max-width: 767.9px) {
+  .dashboard__kelas-card {
+    width: calc(100%);
+  }
+}
+
+.dashboard__kelas-title {
+  margin-bottom: .25rem;
+  grid-area: kelas-title;
+}
+
+.dashboard__pertemuan-title {
+  grid-area: pertemuan-title;
+}
+
+.dashboard__kelas-hari {
+  grid-area: hari;
+}
+
+.dashboard__kelas-waktu {
+  grid-area: waktu;
+}
+
+.dashboard__kelas-kode {
+  grid-area: kode;
+}
+
+.dashboard__kelas-meeting-id {
+  grid-area: meeting-id;
+}
+
+.dashboard__kelas-meeting-pass {
+  grid-area: meeting-pass;
+}
+
+.dashboard__btn-zoom {
+  margin-top: 1rem;
+  grid-area: btn-zoom;
+}
+
+.dashboard__helper-zoom {
+  grid-area: helper-zoom;
+  justify-self: center;
+}
+
+.dashboard__btn-materi {
+  margin-top: 1rem;
+  grid-area: btn-materi;
+}
+
+.dashboard__helper-materi {
+  grid-area: helper-materi;
+  justify-self: center;
+}
+
+.view-profil {
+  min-height: calc(100vh - 6rem);
+  padding-top: 3rem;
+  display: grid;
+  grid-template-columns: 1fr 1.75fr;
+  gap: 4rem;
+}
+
+.view-profil__img {
+  width: 100%;
+}
+
+.view-profil__profil-container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: flex-start;
+  gap: 2rem;
+}
+
+.view-profil__profils {
+  display: grid;
+  grid-template-areas: 'label-nim value-nim' 'label-telp value-telp' 'label-email value-email' 'label-zoom value-zoom';
+  gap: .5rem 5rem;
+}
+
+.view-profil__label--nim {
+  grid-area: label-nim;
+}
+
+.view-profil__label--telp {
+  grid-area: label-telp;
+}
+
+.view-profil__label--email {
+  grid-area: label-email;
+}
+
+.view-profil__label--zoom {
+  grid-area: label-zoom;
+}
+
+.view-profil__value--nim {
+  grid-area: value-nim;
+}
+
+.view-profil__value--telp {
+  grid-area: value-telp;
+}
+
+.view-profil__value--email {
+  grid-area: value-email;
+}
+
+.view-profil__value--zoom {
+  grid-area: value-zoom;
+}
+
+@media screen and (max-width: 767.9px) {
+  .view-profil {
+    grid-template-columns: 1fr;
+    padding-bottom: 6rem;
+  }
+  .view-profil__img {
+    width: 80%;
+    max-width: 400px;
+    justify-self: center;
+  }
+  .view-profil__profils {
+    gap: .5rem 2rem;
+  }
+}
+
+.edit-profil {
+  min-height: calc(100vh - 6rem);
+  padding-bottom: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.edit-profil__card {
+  width: 100%;
+  max-width: 500px;
+  padding: 2rem 3rem;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 1.5rem;
+  background-color: #F4F7FF;
+  border-radius: 4px;
+  box-shadow: 0px 10px 30px rgba(206, 221, 239, 0.25);
+}
+
+.edit-profil__card > .form-buttons {
+  align-self: flex-end;
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+}
+
+.edit-profil__batal-edit-dialog {
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 2rem;
+}
+/*# sourceMappingURL=mahasiswa.css.map */

@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Selamat Datang - FST Meeting</title>
+
+    <link rel="shortcut icon" href="assets/img/logo-unair.png" type="image/x-icon">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/env.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/mahasiswa.css">
+</head>
+
+<body>
+    <img src="assets/img/logo-unair.png" alt="" class="ornament">
+
+    <div class="container login">
+        <!-- mulai ini -->
+        <form class="login__card">
+            <div class="login__title-section">
+                <h1 class="blue">Login</h1>
+                <h5 class="grey">Silakan login menggunakan username dan password cybercampus</h5>
+            </div>
+
+            <div class="form-group">
+                <div class="form-head">
+                    <label class="form-label" for="username">Username</label>
+                    <h6 class="form-helper red">Wajib diisi</h6>
+                </div>
+                <input type="text" class="form-control wajib-diisi" name="username" id="username" placeholder="NIM/NIP">
+            </div>
+            <div class="form-group">
+                <div class="form-head">
+                    <label class="form-label" for="password">Password</label>
+                    <h6 class="form-helper red">Wajib diisi</h6>
+                </div>
+                <input type="password" class="form-control wajib-diisi" name="password" id="password"
+                    placeholder="Password sesuai cybercampus">
+            </div>
+
+            <a href="mahasiswa--dashboard.html" class="button btn-primary login__btn">Login</a>
+        </form>
+        <!-- sampe sini -->
+    </div>
+
+    <!-- kalo mau pake modal boleh disini -->
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/js/env.js"></script>
+    <script>
+        $('.login__btn').click(e => {
+            $('.form-control.wajib-diisi').each(x => {
+                if ($('.form-control.wajib-diisi')[x].value == '') {
+                    e.preventDefault();
+                }
+            })
+        })
+    </script>
+</body>
+
+</html>

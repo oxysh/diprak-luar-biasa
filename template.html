@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <link rel="shortcut icon" href="assets/img/logo-unair.png" type="image/x-icon">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/env.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/mahasiswa.css">
+</head>
+
+<body>
+    <img src="assets/img/logo-unair.png" alt="" class="ornament">
+    <nav class="nav">
+        <div class="container">
+            <img src="assets/img/logo-fst.png" alt="" class="nav__logo">
+            <div class="nav__dropdown">
+                <div class="nav__profile">A</div>
+                <p class="grey">Halo, Annisa!</p>
+                <img src="assets/img/dropdown-arrow.svg" alt="" class="nav__dropdown-arrow">
+            </div>
+            <div class="nav__dropdown-menu">
+                <p class="nav__dropdown-item" onclick="window.location.href = 'mahasiswa--view-profil.html'">Profil Saya
+                </p>
+                <p class="nav__dropdown-item" onclick="window.location.href = 'mahasiswa--login.html'">Log Out</p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container">
+        <!-- mulai ini -->
+        <h1>ini h1</h1>
+        <h2>ini h2</h2>
+        <h3>ini h3</h3>
+        <h4>ini h4</h4>
+        <h5>ini h5</h5>
+        <h6>ini h6</h6>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Perspiciatis a at voluptate esse natus, deleniti
+            harum
+            reprehenderit labore vitae quos.</p>
+        <button class="btn-primary">primer</button>
+        <button class="btn-secondary">sekunder</button>
+        <button class="btn-zoom">tersier</button>
+        <button disabled class="btn-zoom">tersier gbsa</button>
+        <div class="form-group">
+            <label class="form-label">ini labelnya</label>
+            <input type="text" class="form-control" placeholder="ini placeholdernya">
+        </div>
+        <div class="form-group">
+            <div class="form-head">
+                <label class="form-label" for="something">ini labelnya input yg wajib diisi</label>
+                <h6 class="form-helper red hidden">Wajib diisi</h6>
+            </div>
+            <input type="text" class="form-control wajib-diisi" name="something" id="something"
+                placeholder="ini placeholdernya">
+        </div>
+        <!-- sampe sini -->
+    </div>
+
+    <!-- kalo mau pake modal boleh disini -->
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/js/env.js"></script>
+</body>
+
+</html>

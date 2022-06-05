@@ -1,0 +1,148 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dashboard Mahasiswa</title>
+
+    <link rel="shortcut icon" href="assets/img/logo-unair.png" type="image/x-icon">
+
+    <!-- Stylesheet -->
+    <link rel="stylesheet" href="assets/css/env.css">
+    <link rel="stylesheet" href="assets/css/navbar.css">
+    <link rel="stylesheet" href="assets/css/mahasiswa.css">
+</head>
+
+<body>
+    <img src="assets/img/logo-unair.png" alt="" class="ornament">
+    <nav class="nav">
+        <div class="container">
+            <img src="assets/img/logo-fst.png" alt="" class="nav__logo">
+            <div class="nav__dropdown">
+                <div class="nav__profile">A</div>
+                <p class="grey">Halo, Annisa!</p>
+                <img src="assets/img/dropdown-arrow.svg" alt="" class="nav__dropdown-arrow">
+            </div>
+            <div class="nav__dropdown-menu">
+                <p class="nav__dropdown-item" onclick="window.location.href = 'mahasiswa--view-profil.html'">Profil Saya
+                </p>
+                <p class="nav__dropdown-item" onclick="window.location.href = 'mahasiswa--login.html'">Log Out</p>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container dashboard">
+        <!-- mulai ini -->
+        <div class="dashboard__section">
+            <h2 class="blue">Kelas hari ini</h2>
+            <div class="dashboard__kelas">
+                <div class="dashboard__kelas-card">
+                    <h4 class="blue dashboard__kelas-title">Pemrograman Web</h4>
+                    <h5 class="blue dashboard__pertemuan-title">Pertemuan Pertama</h5>
+                    <h5 class="dashboard__kelas-hari"><span class="grey">Hari :</span> Selasa</h5>
+                    <h5 class="dashboard__kelas-waktu"><span class="grey">Pukul :</span> 10.40 - 12.20</h5>
+                    <h5 class="dashboard__kelas-kode">MK - Ruang - Kelas</h5>
+                    <h5 class="dashboard__kelas-meeting-id">324657435754</h5>
+                    <h5 class="dashboard__kelas-meeting-pass">UACC1</h5>
+                    <button class="btn-zoom dashboard__btn-zoom">Kelas Dibuka</button>
+                    <h6 class="red dashboard__helper-zoom">Absensi belum terekam</h6>
+                </div>
+                <div class="dashboard__kelas-card">
+                    <h4 class="blue dashboard__kelas-title">Pemrograman Web</h4>
+                    <h5 class="blue dashboard__pertemuan-title">Pertemuan Pertama</h5>
+                    <h5 class="dashboard__kelas-hari"><span class="grey">Hari :</span> Selasa</h5>
+                    <h5 class="dashboard__kelas-waktu"><span class="grey">Pukul :</span> 10.40 - 12.20</h5>
+                    <h5 class="dashboard__kelas-kode">MK - Ruang - Kelas</h5>
+                    <h5 class="dashboard__kelas-meeting-id">324657435754</h5>
+                    <h5 class="dashboard__kelas-meeting-pass">UACC1</h5>
+                    <button disabled class="btn-zoom dashboard__btn-zoom">Kelas Belum Dibuka</button>
+                    <h6 class="grey dashboard__helper-zoom">03:30:30 Sebelum Kelas Dibuka</h6>
+                </div>
+                <div class="dashboard__kelas-card">
+                    <h4 class="blue dashboard__kelas-title">Pemrograman Web</h4>
+                    <h5 class="blue dashboard__pertemuan-title">Pertemuan Pertama</h5>
+                    <h5 class="dashboard__kelas-hari"><span class="grey">Hari :</span> Selasa</h5>
+                    <h5 class="dashboard__kelas-waktu"><span class="grey">Pukul :</span> 10.40 - 12.20</h5>
+                    <h5 class="dashboard__kelas-kode">MK - Ruang - Kelas</h5>
+                    <h5 class="dashboard__kelas-meeting-id">324657435754</h5>
+                    <h5 class="dashboard__kelas-meeting-pass">UACC1</h5>
+                    <button disabled class="btn-zoom dashboard__btn-zoom">Kelas Belum Dibuka</button>
+                    <h6 class="grey dashboard__helper-zoom">03:30:30 Sebelum Kelas Dibuka</h6>
+                </div>
+                <div class="dashboard__kelas-card">
+                    <h4 class="blue dashboard__kelas-title">Pemrograman Web</h4>
+                    <h5 class="blue dashboard__pertemuan-title">Pertemuan Pertama</h5>
+                    <h5 class="dashboard__kelas-hari"><span class="grey">Hari :</span> Selasa</h5>
+                    <h5 class="dashboard__kelas-waktu"><span class="grey">Pukul :</span> 10.40 - 12.20</h5>
+                    <h5 class="dashboard__kelas-kode">MK - Ruang - Kelas</h5>
+                    <h5 class="dashboard__kelas-meeting-id">324657435754</h5>
+                    <h5 class="dashboard__kelas-meeting-pass">UACC1</h5>
+                    <button disabled class="btn-zoom dashboard__btn-zoom">Kelas Belum Dibuka</button>
+                    <h6 class="grey dashboard__helper-zoom">03:30:30 Sebelum Kelas Dibuka</h6>
+                </div>
+            </div>
+        </div>
+
+        <div class="dashboard__section">
+            <h2 class="blue">Kelas yang diikuti</h2>
+            <div class="dashboard__kelas">
+                <div class="dashboard__kelas-card">
+                    <h4 class="blue dashboard__kelas-title">Pemrograman Web</h4>
+                    <h5 class="blue dashboard__pertemuan-title">Pertemuan Pertama</h5>
+                    <h5 class="dashboard__kelas-hari"><span class="grey">Hari :</span> Selasa</h5>
+                    <h5 class="dashboard__kelas-waktu"><span class="grey">Pukul :</span> 10.40 - 12.20</h5>
+                    <h5 class="dashboard__kelas-kode">MK - Ruang - Kelas</h5>
+                    <h5 class="dashboard__kelas-meeting-id">324657435754</h5>
+                    <h5 class="dashboard__kelas-meeting-pass">UACC1</h5>
+                    <button disabled class="btn-zoom dashboard__btn-zoom">Kelas Belum Dibuka</button>
+                    <h6 class="grey dashboard__helper-zoom">03:30:30 Sebelum Kelas Dibuka</h6>
+                </div>
+                <div class="dashboard__kelas-card">
+                    <h4 class="blue dashboard__kelas-title">Pemrograman Web</h4>
+                    <h5 class="blue dashboard__pertemuan-title">Pertemuan Pertama</h5>
+                    <h5 class="dashboard__kelas-hari"><span class="grey">Hari :</span> Selasa</h5>
+                    <h5 class="dashboard__kelas-waktu"><span class="grey">Pukul :</span> 10.40 - 12.20</h5>
+                    <h5 class="dashboard__kelas-kode">MK - Ruang - Kelas</h5>
+                    <h5 class="dashboard__kelas-meeting-id">324657435754</h5>
+                    <h5 class="dashboard__kelas-meeting-pass">UACC1</h5>
+                    <button disabled class="btn-zoom dashboard__btn-zoom">Kelas Belum Dibuka</button>
+                    <h6 class="grey dashboard__helper-zoom">03:30:30 Sebelum Kelas Dibuka</h6>
+                </div>
+                <div class="dashboard__kelas-card">
+                    <h4 class="blue dashboard__kelas-title">Pemrograman Web</h4>
+                    <h5 class="blue dashboard__pertemuan-title">Pertemuan Pertama</h5>
+                    <h5 class="dashboard__kelas-hari"><span class="grey">Hari :</span> Selasa</h5>
+                    <h5 class="dashboard__kelas-waktu"><span class="grey">Pukul :</span> 10.40 - 12.20</h5>
+                    <h5 class="dashboard__kelas-kode">MK - Ruang - Kelas</h5>
+                    <h5 class="dashboard__kelas-meeting-id">324657435754</h5>
+                    <h5 class="dashboard__kelas-meeting-pass">UACC1</h5>
+                    <button disabled class="btn-zoom dashboard__btn-zoom">Kelas Belum Dibuka</button>
+                    <h6 class="grey dashboard__helper-zoom">03:30:30 Sebelum Kelas Dibuka</h6>
+                </div>
+                <div class="dashboard__kelas-card">
+                    <h4 class="blue dashboard__kelas-title">Pemrograman Web</h4>
+                    <h5 class="blue dashboard__pertemuan-title">Pertemuan Pertama</h5>
+                    <h5 class="dashboard__kelas-hari"><span class="grey">Hari :</span> Selasa</h5>
+                    <h5 class="dashboard__kelas-waktu"><span class="grey">Pukul :</span> 10.40 - 12.20</h5>
+                    <h5 class="dashboard__kelas-kode">MK - Ruang - Kelas</h5>
+                    <h5 class="dashboard__kelas-meeting-id">324657435754</h5>
+                    <h5 class="dashboard__kelas-meeting-pass">UACC1</h5>
+                    <button disabled class="btn-zoom dashboard__btn-zoom">Kelas Belum Dibuka</button>
+                    <h6 class="grey dashboard__helper-zoom">03:30:30 Sebelum Kelas Dibuka</h6>
+                </div>
+            </div>
+        </div>
+        <!-- sampe sini -->
+    </div>
+
+    <!-- kalo mau pake modal boleh disini -->
+
+
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"
+        integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
+    <script src="assets/js/env.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,264 @@
+@import 'resources';
+
+.login {
+    min-height: calc(100vh - 6rem);
+    padding-bottom: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__card {
+        width: 100%;
+        max-width: 500px;
+        padding: 2rem 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: stretch;
+        justify-content: center;
+        gap: 2rem;
+
+        background-color: $alice-blue;
+        border-radius: 4px;
+        box-shadow: 0px 10px 30px rgba(206, 221, 239, 0.25);
+
+        >.btn-primary {
+            align-self: flex-end;
+        }
+    }
+
+    &__title-section {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: .25rem;
+
+        >* {
+            text-align: center;
+        }
+    }
+}
+
+.dashboard {
+    min-height: calc(100vh - 6rem);
+    padding-top: 3rem;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 2rem;
+
+    &__section {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1.25rem;
+    }
+
+    &__kelas {
+        width: 100%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 1rem 1.5rem;
+    }
+
+    &__kelas-card {
+        width: calc((100% - 3rem)/3);
+        padding: 1.25rem 1.5rem;
+        display: grid;
+        grid-template-columns: 1fr 1.35fr;
+        grid-template-areas:
+            'kelas-title kelas-title'
+            'pertemuan-title kode'
+            'hari meeting-id'
+            'waktu meeting-pass'
+            'btn-materi btn-zoom'
+            'helper-materi helper-zoom'
+        ;
+        gap: .25rem;
+        background-color: $alice-blue;
+        box-shadow: 0px 10px 30px rgba(206, 221, 239, 0.25);
+        border-radius: .25rem;
+
+        @media screen and (max-width: 1199.9px) {
+            width: calc((100% - 1.5rem)/2);
+        }
+
+        @media screen and (max-width: 767.9px) {
+            width: calc(100%);
+        }
+    }
+
+    &__kelas-title {
+        margin-bottom: .25rem;
+        grid-area: kelas-title;
+    }
+
+    &__pertemuan-title {
+        grid-area: pertemuan-title;
+    }
+
+    &__kelas-hari {
+        grid-area: hari;
+    }
+
+    &__kelas-waktu {
+        grid-area: waktu;
+    }
+
+    &__kelas-kode {
+        grid-area: kode;
+    }
+
+    &__kelas-meeting-id {
+        grid-area: meeting-id;
+    }
+
+    &__kelas-meeting-pass {
+        grid-area: meeting-pass;
+    }
+
+    &__btn-zoom {
+        margin-top: 1rem;
+        grid-area: btn-zoom;
+    }
+
+    &__helper-zoom {
+        grid-area: helper-zoom;
+        justify-self: center;
+    }
+
+    &__btn-materi {
+        margin-top: 1rem;
+        grid-area: btn-materi;
+    }
+
+    &__helper-materi {
+        grid-area: helper-materi;
+        justify-self: center;
+    }
+}
+
+.view-profil {
+    min-height: calc(100vh - 6rem);
+    padding-top: 3rem;
+    display: grid;
+    grid-template-columns: 1fr 1.75fr;
+    gap: 4rem;
+
+    &__img {
+        width: 100%;
+    }
+
+    &__profil-container {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        gap: 2rem;
+    }
+
+    &__profils {
+        display: grid;
+        grid-template-areas:
+            'label-nim value-nim'
+            'label-telp value-telp'
+            'label-email value-email'
+            'label-zoom value-zoom'
+        ;
+        gap: .5rem 5rem;
+    }
+
+    &__label {
+        &--nim {
+            grid-area: label-nim;
+        }
+
+        &--telp {
+            grid-area: label-telp;
+        }
+
+        &--email {
+            grid-area: label-email;
+        }
+
+        &--zoom {
+            grid-area: label-zoom;
+        }
+    }
+
+    &__value {
+        &--nim {
+            grid-area: value-nim;
+        }
+
+        &--telp {
+            grid-area: value-telp;
+        }
+
+        &--email {
+            grid-area: value-email;
+        }
+
+        &--zoom {
+            grid-area: value-zoom;
+        }
+    }
+
+    @media screen and (max-width: 767.9px) {
+        grid-template-columns: 1fr;
+        padding-bottom: 6rem;
+
+        &__img {
+            width: 80%;
+            max-width: 400px;
+            justify-self: center;
+        }
+
+        &__profils {
+            gap: .5rem 2rem;
+        }
+    }
+}
+
+.edit-profil {
+    min-height: calc(100vh - 6rem);
+    padding-bottom: 6rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    &__card {
+        width: 100%;
+        max-width: 500px;
+        padding: 2rem 3rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 1.5rem;
+
+        background-color: $alice-blue;
+        border-radius: 4px;
+        box-shadow: 0px 10px 30px rgba(206, 221, 239, 0.25);
+
+        >.form-buttons {
+            align-self: flex-end;
+            display: flex;
+            align-items: center;
+            justify-content: flex-end;
+            gap: 1rem;
+        }
+    }
+
+    &__batal-edit-dialog {
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 2rem;
+    }
+}

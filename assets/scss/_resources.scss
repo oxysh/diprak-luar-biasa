@@ -1,0 +1,23 @@
+// main colors
+$alice-blue: #F4F7FF;
+$columbia-blue: #CEDDEF;
+$rich-black: #060C21;
+$catalina-blue: #001E6C;
+$cyan-blue-azure: #537EC5;
+$pastel-orange: #FFAA4C;
+
+// edited colors
+$rich-black-70: rgba($rich-black, .7);
+$rich-black-50: rgba($rich-black, .5);
+$gargoyle-gas: #FFD74B;
+
+// alert
+$big-dip-oruby: #A0213E;
+$deep-carrot-orange: #F26232;
+$gold-web: #FFD600;
+$north-texas-green: #19A437;
+
+// fonts
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Raleway:wght@400;500;600&display=swap');
+$raleway: 'Raleway', sans-serif;
+$outfit: 'Outfit', sans-serif;

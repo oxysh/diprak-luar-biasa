@@ -1,0 +1,71 @@
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500&family=Raleway:wght@400;500;600&display=swap");
+.nav {
+  width: 100%;
+  padding: 1rem 0;
+  position: fixed;
+  top: 0;
+  left: 0;
+  background-color: #F4F7FF;
+  z-index: 9;
+}
+
+.nav > .container {
+  margin-top: 0;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nav__logo {
+  cursor: pointer;
+}
+
+.nav__dropdown {
+  display: flex;
+  align-items: center;
+  justify-content: flex-end;
+  gap: 1rem;
+  cursor: pointer;
+}
+
+.nav__profile {
+  margin-right: .25rem;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 50%;
+  border: 0.5px solid rgba(6, 12, 33, 0.5);
+  color: #537EC5;
+}
+
+.nav__dropdown-menu {
+  min-width: 200px;
+  position: absolute;
+  right: 0;
+  top: 100%;
+  border-radius: 0px 0px 10px 10px;
+  box-shadow: 0px 10px 35px rgba(83, 126, 197, 0.15);
+  visibility: hidden;
+  opacity: 0;
+  transition: all .4s ease-in-out;
+}
+
+.nav__dropdown-menu.active {
+  visibility: visible;
+  opacity: 1;
+}
+
+.nav__dropdown-item {
+  padding: .75rem 2rem;
+  color: rgba(6, 12, 33, 0.5);
+  background-color: #F4F7FF;
+  cursor: pointer;
+}
+
+.nav__dropdown-item:hover {
+  background-color: #CEDDEF;
+  color: #060C21;
+}
+/*# sourceMappingURL=navbar.css.map */
