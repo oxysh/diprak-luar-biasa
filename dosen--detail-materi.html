@@ -88,12 +88,12 @@
                     <h4 class="blue">Judul Pertemuan</h4>
                     <div class="detail-mk__materi-card-body">
                         <h5 class="blue">Judul materi</h5>
-                        <h5><span class="grey">Tanggal :</span> 29-05-2022</h5>
+                        <h5><span class="grey">Tanggal :</span> 29-05-2022 07.00</h5>
                     </div>
-                    <button class="btn-secondary">Edit Materi</button>
+                    <button class="btn-secondary" id="editMateri">Edit Materi</button>
                 </div>
 
-                <div class="detail-mk__materi-add-btn">
+                <div class="detail-mk__materi-add-btn" id="addMateri">
                     <h4 class="grey">+ Tambah Materi</h4>
                 </div>
             </div>
@@ -102,11 +102,119 @@
     </div>
 
     <!-- kalo mau pake modal boleh disini -->
+    <form method="post" class="detail-mk__add-materi-dialog dialog">
+        <div class="dialog__head">
+            <h3 class="dialog__title blue">Tambah Materi</h3>
+            <h5 class="dialog__title grey">Tambahkan materi untuk dapat masuk ke dalam zoom</h5>
+        </div>
+        <div class="dialog__content">
+            <div class="form-group">
+                <div class="form-head">
+                    <label class="form-label" for="tanggal">Tanggal Mata Kuliah</label>
+                    <h6 class="form-helper red">Wajib diisi</h6>
+                </div>
+                <input type="datetime-local" class="form-control wajib-diisi" name="tanggal" id="tanggal">
+            </div>
+            <div class="form-group">
+                <div class="form-head">
+                    <label class="form-label" for="pertemuan">Judul Pertemuan</label>
+                    <h6 class="form-helper red">Wajib diisi</h6>
+                </div>
+                <input type="text" class="form-control wajib-diisi" name="pertemuan" id="pertemuan"
+                    placeholder="NIM/NIP">
+            </div>
+            <div class="form-group">
+                <div class="form-head">
+                    <label class="form-label" for="materi">Judul Materi</label>
+                    <h6 class="form-helper red">Wajib diisi</h6>
+                </div>
+                <input type="text" class="form-control wajib-diisi" name="materi" id="materi" placeholder="NIM/NIP">
+            </div>
+        </div>
+
+        <div class="dialog__btns">
+            <button type="button" class="btn-secondary dialog__cancel">Batalkan</button>
+            <button type="submit" class="btn-primary">Tambahkan</button>
+        </div>
+    </form>
+
+    <form method="post" class="detail-mk__edit-materi-dialog dialog">
+        <div class="dialog__head">
+            <h3 class="dialog__title blue">Edit Materi</h3>
+            <h5 class="dialog__title grey">Anda hanya dapat mengubah judul pertemuan dan judul materi</h5>
+        </div>
+        <div class="dialog__content">
+            <div class="form-group">
+                <div class="form-head">
+                    <label class="form-label" for="editTanggal">Tanggal Mata Kuliah</label>
+                    <h6 class="form-helper red">Wajib diisi</h6>
+                </div>
+                <input type="datetime-local" class="form-control wajib-diisi" name="editTanggal" id="editTanggal"
+                    value="2022-05-29T07:00">
+            </div>
+            <div class="form-group">
+                <div class="form-head">
+                    <label class="form-label" for="editPertemuan">Judul Pertemuan</label>
+                    <h6 class="form-helper red">Wajib diisi</h6>
+                </div>
+                <input type="text" class="form-control wajib-diisi" name="editPertemuan" id="editPertemuan"
+                    placeholder="Judul Pertemuan" value="Judul Pertemuan">
+            </div>
+            <div class="form-group">
+                <div class="form-head">
+                    <label class="form-label" for="editMateri">Judul Materi</label>
+                    <h6 class="form-helper red">Wajib diisi</h6>
+                </div>
+                <input type="text" class="form-control wajib-diisi" name="editMateri" id="editMateri"
+                    placeholder="Judul Materi" value="Judul materi">
+            </div>
+        </div>
+
+        <div class="dialog__btns">
+            <button type="button" class="btn-secondary dialog__cancel">Batalkan</button>
+            <button type="submit" class="btn-primary">Edit</button>
+        </div>
+    </form>
+
+    <div class="dialog__bg"></div>
+
 
 
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"
         integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4=" crossorigin="anonymous"></script>
     <script src="assets/js/env.js"></script>
+    <script>
+        $('.detail-mk__add-materi-dialog button:submit').click(e => {
+            $('.detail-mk__add-materi-dialog .form-control.wajib-diisi').each(x => {
+                if ($('.form-control.wajib-diisi')[x].value == '') {
+                    e.preventDefault();
+                }
+            })
+        })
+
+        $('.detail-mk__edit-materi-dialog button:submit').click(e => {
+            $('.detail-mk__edit-materi-dialog .form-control.wajib-diisi').each(x => {
+                if ($('.form-control.wajib-diisi')[x].value == '') {
+                    e.preventDefault();
+                }
+            })
+        })
+
+        $('.dialog__cancel').click(e => {
+            e.currentTarget.parentElement.parentElement.classList.remove('active');
+            $('.dialog__bg')[0].classList.remove('active')
+        })
+
+        $('#addMateri').click(() => {
+            $('.detail-mk__add-materi-dialog')[0].classList.add('active')
+            $('.dialog__bg')[0].classList.add('active')
+        })
+
+        $('#editMateri').click(() => {
+            $('.detail-mk__edit-materi-dialog')[0].classList.add('active')
+            $('.dialog__bg')[0].classList.add('active')
+        })
+    </script>
 </body>
 
 </html>

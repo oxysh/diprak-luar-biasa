@@ -80,6 +80,7 @@
 
 .detail-mk {
     min-height: calc(100vh - 6rem);
+    padding-bottom: 3rem;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -92,6 +93,10 @@
         align-items: flex-start;
         justify-content: center;
         gap: 2.5rem;
+
+        @media screen and (max-width: 767.9px) {
+            flex-direction: column;
+        }
     }
 
     &--grid {
@@ -107,6 +112,11 @@
             'label-lima value-lima'
         ;
         gap: .5rem;
+
+        @media screen and (max-width: 767.9px) {
+            width: 80%;
+            grid-template-columns: 1fr 1fr;
+        }
 
         &__title {
             grid-area: title;
@@ -198,5 +208,24 @@
         justify-content: center;
         border: 2px dashed $rich-black-50;
         border-radius: 4px;
+    }
+
+    &__materi-card,
+    &__materi-add-btn {
+        @media screen and (max-width: 1199.9px) {
+            width: calc((100% - 3rem)/4);
+        }
+
+        @media screen and (max-width: 991.9px) {
+            width: calc((100% - 2rem)/3);
+        }
+
+        @media screen and (max-width: 767.9px) {
+            width: calc((100% - 1rem)/2);
+        }
+
+        @media screen and (max-width: 575.9px) {
+            width: 100%;
+        }
     }
 }
